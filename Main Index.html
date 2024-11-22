@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sagar Sonawane Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="C:\Users\hp\Desktop\Sagar Portfolio\CSS\open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="C:\Users\hp\Desktop\Sagar Portfolio\CSS\animate.css">
+    <link rel="stylesheet" href="C:\Users\hp\Desktop\Sagar Portfolio\CSS\owl.carousel.min.css">
+    <link rel="stylesheet" href="C:\Users\hp\Desktop\Sagar Portfolio\CSS\owl.theme.default.min.css">
+    <link rel="stylesheet" href="C:\Users\hp\Desktop\Sagar Portfolio\CSS\magnific-popup.css">
+    <link rel="stylesheet" href="C:\Users\hp\Desktop\Sagar Portfolio\CSS\aos.css">
+    <link rel="stylesheet" href="C:\Users\hp\Desktop\Sagar Portfolio\CSS\flaticon.css">
+    <link rel="stylesheet" href="C:\Users\hp\Desktop\Sagar Portfolio\CSS\style.css">
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+    <!-- Font Awesome CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Sagar Sonawane</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+            <!--<li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>-->
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+                <div class="one-third js-fullheight order-md-last img" style="background-image:url(file:///C:/Users/hp/Desktop/Sagar%20Portfolio/Images/Thank.jpg);height: 170px;">
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Sagar Sonawane</span></h1>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'Data Enthusiast  ',
+                        'PowerBI ',
+                        'Cloud enthusiast',
+                        'Qliksense  ',
+
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+			            <h2>A Data Analyst</h2>
+						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 2 years of experience</h2> -->
+						<!-- <br> -->
+                        <p><a href="https://www.linkedin.com/in/sagarsonawane7379" class="btn btn-white btn-outline-white py-3 px-4" target="_blank">My works</a></p>
+
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+									  <div class="about-img">
+										<a href="https://www.example.com">
+                                            <img src="data:image/png;base64,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" class="img-fluid rounded b-shadow-a" alt="">
+                                          </a>
+									  </div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+									  <div class="about-info">
+										<p><span class="title-s">Name: </span> <span>Sagar Sonawane</span></p>
+										<p><span class="title-s">Job Role: </span> <span>Data Analyst</span></p>
+										<p><span class="title-s">Experience: </span> <span> 11 Months</span></p>
+										<p><span class="title-s">Address: </span> <span>Pune, India</span></p>
+									  </div>
+									</div>
+								  </div>
+
+								<div class="skill-mf">
+									<p class="title-s">Technical Skills</p>
+									<span>Qliksense</span>
+										<div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									
+									<span>POWER BI</span>
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									
+									<span> Microsoft Azure </span>
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+                                            <span> SQL </span>
+                                            <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+                                                aria-valuemax="100"></div>
+                                                <span> Project Management</span>
+                                                <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+                                                    aria-valuemax="100"></div>
+                                                    <span> GenAI</span>
+                                                    <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+                                                        aria-valuemax="100"></div>
+                                                        <span> HTML & CSS </span>
+                                                    <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+                                                        aria-valuemax="100"></div>
+                                                        <span> Design Thinking</span>
+                                                    <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+                                                        aria-valuemax="100"></div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+								
+								<p>Passionate about uncovering the true value of data through advanced analytics. Proficient in Power BI, Qlik Sense, and QlikView. With a strong understanding of cloud technologies, I have hands-on experience with Azure, Google Cloud Platform (GCP), and Amazon Web Services (AWS). Let’s connect and explore the power of data together!</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Profile:</span> <span>Data Analytics</span></li>
+									<li class="d-flex"><span>Education:</span> <span>Bachelor of Engineering (BE)</span></li>
+									<li class="d-flex"><span>Language:</span> <span>English, Hindi, Marathi, German</span></li>
+									<li class="d-flex"><span>BI Tools:</span> <span>Microsoft Power BI and Qliksense</span></li>
+									<li class="d-flex"><span>Other Skills:</span> <span>Data Visualization, Database Managemet, Design Thinking, Python, Git, Cloud Technology</span></li>
+									
+								</ul>
+							</div>
+						</div>
+
+
+						 
+							<div class="text">
+								<p><a href="https://www.linkedin.com/in/sagarsonawane7379/" class="btn btn-primary py-3 px-3" target="_blank">LinkedIn</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+
+
+
+	
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Resume</h1>
+            <h2 class="mb-4">Resume</h2>
+            <p> To learn more about my work & view my detailed resume, </p>
+            <p>  please click on the button below. </p>
+			<br>
+			<div class="row justify-content-center mt-5">
+    			<div class="col-md-6 text-center ftco-animate">
+    				<p><a onclick="window.open('https://www.dropbox.com/scl/fi/pdg1pa1p31u26ge68k0o2/Resume-1.pdf?rlkey=k8w4dx26ciqzzmy0pg5jnecfg&st=j2329ryk&dl=0')" class="btn btn-primary py-4 px-5">Download Resume</a></p>
+    			</div>
+    		</div>
+          </div>
+        </div>
+
+		<div class="row">
+			<h1 class="big-4">Experience</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+		<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">Apr 2024- till now</span>
+						<h2>Programmer Analyst Trainee</h2>
+						<span class="position">Cognizant</span>
+						<p class="mt-4">
+							<ul>
+								<li>Worked on Qliksense and SQL to enhanced operational efficiency by automating a previously manual process.</li>
+								<li>Create data visualizations and report to communicate findings to stakeholders and decision-makers.</li>
+								<li>Verified data accuracy and relevance, ensuring a reliable and user-friendly mapping experience.</li>
+								<li>Improved business continuity by ensuring seamless remote work during disruptions.</li>
+							</ul>
+						</p>
+					</div>
+                    
+
+				</div>
+                <div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">Jan 2024-April 2024</span>
+						<h2>CSD Intern</h2>
+						<span class="position">Cognizant</span>
+						<p class="mt-4">
+							<ul>
+								<li>The Certified Skill Development (CSD) Internship is an intensive training initiative designed to equip trainees with the essential skills and knowledge needed to excel in a business environment at Cognizant, ensuring they are fully business-ready upon completion</li>
+								<li>Skills for CSD at Cognizant : Qliksense, SQL, DBMS, Power BI, GenAI.</li>
+                                <li>Upon successful completion of the CSD Internship, I was offered full-time employment as a PAT.</li>
+							</ul>
+						</p>
+					</div>
+                    
+
+				</div>
+			</div>
+
+		<br>
+		<br>
+
+		<div class="row">
+			<h1 class="big-4">Education</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+			<div class="row">
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2019-2023</span>
+    					<h2>Bachelor of Engineering</h2>
+    					<span class="position">Savitribai Phule Pune University</span>
+    					<p class="mt-4">Grade: First class with distinction.</p>
+    				</div>
+    			</div>
+
+    		</div>
+
+    		 	</div>
+    </section>
+
+   
+
+    <!--<section class="ftco-section" id="project-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Projects</h2>
+            <p>Below are the sample Data Analytics projects on SQL, Excel, Power BI.</p>
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/soniya900/SQL-PROJECT-Finance_Analytics" class="block-20 zoom-effect" style="background-image: url('images/finance.jpeg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/soniya900/SQL-PROJECT-Finance_Analytics">Atliq Hardware Finance Analytics using SQL</a></h3>
+                <p>Analyzed manufacturer of computer hardware in India and other nations using advanced SQL queires to identify gaps and increase the business growth.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/soniya900/ExcelProjects-Atliq-Sales-Analytics" class="block-20 zoom-effect" style="background-image: url('images/market-performance.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/soniya900/ExcelProjects-Atliq-Sales-Analytics">Data Analysis using Excel Project</a></h3>
+                <p>In this project I work on creating reports in excel for AtliQ Hardware's finance and sales department which can help both the teams in taking crucial decisions in order to expand there business and make an impactable market presence around the globe.
+ </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="https://github.com/soniya900/Power-bi-Dashboard" class="block-20 zoom-effect" style="background-image: url('images/ex.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/rishabhnmishra/Madhav_Store_Analysis_PowerBI/blob/main/Madhav%20Store%20dashboard.jpg">Power BI AtliQ-Hardware-BUSINESS INSIGHTS 360</a></h3>
+                <p>Designed a power bi dashboard for AtliQ Hardware. This project is helped to give answers to the questions of stakeholder in terms all the aspects like finance, sales, marketing and supply chain.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+	<br>
+		<div class="row d-flex justify-content-center">  
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/soniya900/-Hospitality-Analysis" class="block-20 zoom-effect" style="background-image: url('images/h1.png');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/soniya900/-Hospitality-Analysis">AtliQ Hospitality Analysis - PowerBI</a></h3>
+				  <p>As part of the codebasics resume challenge, I have worked on this analysis project.</p>
+				</div>
+			  </div>
+			</div>
+		 </div>
+	  </div>
+    </section>
+	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+				<div class="row justify-content-center">
+					<div class="col-md-7 ftco-animate text-center">
+						<h2>More projects on<span> Github  </span> </h2>
+						<div class="heading"> <h4> I love to solve business problems &amp; uncover hidden data stories </h4>
+						<br>
+						<p><a href="https://github.com/soniya900" class="btn btn-primary py-3 px-5">GitHub</a></p>
+						</div>
+					</div>
+				</div>
+		</div>
+	</section>-->
+
+
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+        <div class="container">
+          <div class="row justify-content-center mb-5 pb-3">
+            <div class="col-md-7 heading-section text-center ftco-animate">
+              <h1 class="big big-2">Contact</h1>
+              <h2 class="mb-4">Contact Me</h2>
+              <p>I'm always open to new opportunities and challenges, Feel free to reach out if you'd like to collaborate, Below are the details to reach out to me!</p>
+            </div>
+          </div>
+      
+          <div class="row d-flex justify-content-center align-items-center mb-5">
+          
+            <!-- Contact Number Section -->
+            <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+              <div class="align-self-stretch box p-4 text-center">
+                <div class="icon d-flex align-items-center justify-content-center">
+                  <!-- Font Awesome Icon for Phone -->
+                  <i class="fas fa-phone-alt"></i>
+                </div>
+                <h3 class="mb-4">Contact Number</h3>
+                <p><a href="tel://0101010101">+91 8308397379</a></p>
+              </div>
+            </div>
+      
+            <!-- Email Address Section -->
+            <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+              <div class="align-self-stretch box p-4 text-center">
+                <div class="icon d-flex align-items-center justify-content-center">
+                  <!-- Font Awesome Icon for Email -->
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <h3 class="mb-4">Email Address</h3>
+                <p><a href="mailto:info@yoursite.com">sonawane01edu@gmail.com</a></p>
+              </div>
+            </div>
+      
+          </div>
+          <div class="container">
+            <br><br><br>
+            <ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+              <li class="ftco-animate normal-txt">Find me on</li>
+              
+              <!-- LinkedIn Icon with Background Holder -->
+              <li class="ftco-animate">
+                <a href="https://www.linkedin.com/in/sagarsonawane7379" target="_blank" class="icon-container">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+              </li>
+              
+              <!-- GitHub Icon with Background Holder -->
+              <li class="ftco-animate">
+                <a href="https://github.com/SAGARSONAWANE17" target="_blank" class="icon-container">
+                  <i class="fab fa-github"></i>
+                </a>
+              </li>
+            </ul>
+            <br>
+          </div>
+    
+        </div>
+    </section>  
+  
+   
+      
+           
+   
+
+
+
+ 
+	
+   <!-- <footer class="ftco-footer ftco-section">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 text-center">
+  
+			  <p>
+	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+	</p>
+			</div>
+		  </div>
+		</div>
+	  </footer>-->
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="C:\Users\hp\Desktop\Sagar Portfolio\JavaScript\jquery.min.js"></script>
+  <script src="C:\Users\hp\Desktop\Sagar Portfolio\JavaScript\jquery-migrate-3.0.1.min.js"></script>
+  <script src="C:\Users\hp\Desktop\Sagar Portfolio\JavaScript\popper.min.js"></script>
+  <script src="C:\Users\hp\Desktop\Sagar Portfolio\JavaScript\bootstrap.min.js"></script>
+  <script src="C:\Users\hp\Desktop\Sagar Portfolio\JavaScript\jquery.easing.1.3.js"></script>
+  <script src="C:\Users\hp\Desktop\Sagar Portfolio\JavaScript\jquery.waypoints.min.js"></script>
+  <script src="C:\Users\hp\Desktop\Sagar Portfolio\JavaScript\jquery.stellar.min.js"></script>
+  <script src="C:\Users\hp\Desktop\Sagar Portfolio\JavaScript\owl.carousel.min.js"></script>
+  <script src="C:\Users\hp\Desktop\Sagar Portfolio\JavaScript\jquery.magnific-popup.min.js"></script>
+  <script src="C:\Users\hp\Desktop\Sagar Portfolio\JavaScript\aos.js"></script>
+  <script src="C:\Users\hp\Desktop\Sagar Portfolio\JavaScript\jquery.animateNumber.min.js"></script>
+  <script src="C:\Users\hp\Desktop\Sagar Portfolio\JavaScript\scrollax.min.js"></script>
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+  
+  <script src="C:\Users\hp\Desktop\Sagar Portfolio\JavaScript\main.js"></script>
+    
+  </body>
+</html>
